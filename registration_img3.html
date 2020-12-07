@@ -1,0 +1,180 @@
+<?php
+session_start();
+ob_start();
+?>
+
+<html>
+<head>
+
+      <title>Register</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+      
+      <link rel="stylesheet" href="style-footer.css">
+	<link href="style1.css" rel="stylesheet">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link href="font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="style-body.css" rel="stylesheet" type="text/css" media="all"/>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+      <script>
+            // passing the selected image reference to slice the image
+            function changeIt(img)
+            {
+                  var name = img.src;
+                  console.log(name);
+                  window.location.href = "reg_slice3.php?var="+name; 
+            }
+      </script>
+
+</head>
+
+<?php
+$var=$_GET['var'];
+$_SESSION['a'][8]=$_GET['var'];	
+$_SESSION['layer4']=$_GET['var'];
+?>
+
+<body>
+<!--Main Header-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><h2>Graphical Password Authentication</h2></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Service1</a></li>
+            <li><a href="#">Service2</a></li>
+            <li><a href="#">Service3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!--End Main Header -->
+
+<!-- signup form -->
+<div class="signupform">
+	<div class="container">
+		<div class="agile_info">
+			<div class="login_form">
+				<div class="left_grid_info">
+					<h1>Manage Your User Account</h1>
+					<p>This system provides high security to your account through the graphical password.</p><br>
+					<img class="im1" src="https://picsum.photos/id/0/367/267" height="270" width="370">
+				</div>
+			</div>
+			<div class="login_info">
+				<h1 style="color: green">Create New Account</h1>
+				<h3 class="account3" style="color:red">Select the 3rd image for the graphical password.</h3><br><br>
+				<center>
+				<img class="im" src="..\images\pw\image1.jpg" onclick="changeIt(this)" height="120" width="120">
+				<img class="im" src="..\images\pw\image2.jpg" onclick="changeIt(this)" height="120" width="120">
+				<img class="im" src="..\images\pw\image3.jpg" onclick="changeIt(this)" height="120" width="120">
+				<img class="im" src="..\images\pw\image4.jpg" onclick="changeIt(this)" height="120" width="120">
+				<img class="im" src="..\images\pw\image5.jpg" onclick="changeIt(this)" height="120" width="120">
+				</center>
+        <br><br><h3>Click here to select the cued points</h3>
+        <a href="#" class="regis_img"><h3><u><i>Select cued points</i></u></h3></a>
+        <br>
+        <button class="btn btn-success btn-lg " type="submit" name="submit"><a href="registration_img2.html" class="btnstyle">>> Back</a></button >
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- footer -->
+<footer class="footer-distributed">
+    <!-- footer left -->
+    <div class="footer-left">              
+          <h3>Graphical Password authentication</h3>        
+          <p class="footer-links">
+                <a href="#">Home</a>
+                ·
+                <a href="#">Blog</a>
+                ·
+                <a href="#">About</a>
+                ·
+                <a href="#">Faq</a>
+                ·
+                <a href="#">Contact</a>
+          </p>
+          <p class="footer-company-name">Graphical Password authentication &copy; 2020</p>
+    </div>
+    <!-- footer center-->
+    <div class="footer-center">              
+          <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Learn More<span>Learn More about the system</span>Visit out blog <a>"abc.blog.com"</a></p>
+          </div>
+                  
+          <div>
+                <i class="fa fa-phone"></i>
+                <p> Need Help<span>+ 100-100-100</span></p>
+          </div>
+                  
+          <div>
+                <i class="fa fa-envelope"></i>
+                <p>Give Feedback<span><a href="mailto:support@company.com">support@company.com</a></span></p>
+          </div>      
+    </div>
+    <!-- footer right-->
+    <div class="footer-right">              
+          <p class="footer-company-about">
+                <span>About the system</span>
+                The proposed system is “Graphical password authentication using cued click points” which is a combination of passfaces and passpoints.In this system during registration process user has to select the number of images the user needs and a particular points in each images.
+          </p>
+                  
+          <div class="footer-icons">
+                  
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+                  
+          </div>
+                  
+    </div>
+                  
+</footer>
+
+<script src="plugins/jquery.js"></script>
+<script src="plugins/bootstrap.min.js"></script>
+<script src="plugins/bootstrap-select.min.js"></script>
+
+
+<script src="plugins/validate.js"></script>
+<script src="plugins/wow.js"></script>
+<script src="plugins/jquery-ui.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
